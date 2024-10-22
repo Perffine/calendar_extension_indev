@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Victor's Calendar Program</title>
+</head>
+<body>
+    <div id="eventsContainer">
+        <!-- <div id ="title">Victor's scheduler program!</div> -->
+        <div id="disclosure">
+            <p>Victor's Calendar Program's use and transfer of information received from Google APIs will 
+                adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, 
+                including the Limited Use requirements.</p>
+                <button id="okButton" style="display: block;">OK!</button>  
+        </div>
+        <div id="disclosure2">
+            <p>Still very much a work in progress, your patience is appreciated!</p>
+            <ul>
+                <li>v1.08 beta: will fetch events from calendars containing the word 'family'</li>
+                <li>** this may require that you sign out, and sign in again **</li>
+                <li>v1.07 beta: fixed yesterday events in today's box</li>
+                <li>v1.06 beta: more begging</li>
+                <li>v1.05 beta: added begging for money</li>
+                <li>v1.04 beta: improved log in</li>
+                <li>v1.03 beta: working on Brave support</li>
+                <li>v1.02 beta: fixed bug where events were doubled - login broken</li>
+                <li>version 1.01 beta: fixed alert</li>
+                <li>version 1.0 beta: ran out of 9's, added reminder, fixed spelling error</li>
+                <li>version 0.9999: fixed spleling error</li>
+                <li>version 0.999: fixed today/tomorrow bug</li>
+                <li>version 0.99: added error message screen, improved sign in process</li>
+                <li>version 0.98: improved date recognition, added different spellings of 'doctor' and 'birthday'</li>
+                <li>version 0.97: updated log out/log in procedure, added this screen</li> 
+            </ul>
+            <p>TO DO:</p>
+            <ul>
+                <li>Expand to Brave and other browsers</li>
+                <li>Test functionality on sync'd browsers</li>
+            </ul>
+            <p>Contact: perfectly.fine.applications@gmail.com</p>
+              
+        </div>
+        <div id="authButtonContainer" style="display: none;">
+            <button id="authorize_button">Click here if below is blank</button>
+            <p>This will sign you in to Google calendar. It may take a few seconds.</p>
+        </div>
+        <br>
+        <div id="today" style="display: none;">
+        <h1><u>Today:</u></h1>
+        <div id="eventsToday"></div>
+        </div>
+        <br>
+        <div id="tomorrow" style="display: none;">
+        <h1><u>Tomorrow:</u></h1>
+        <div id="eventsTomorrow"></div>
+        </div>
+        <br>
+        <div id="appointments" style="display: none;">
+        <h1><u>Upcoming:</u></h1>
+        <div id="eventsAppointments"></div>
+        </div>
+        <br>
+        <button id="goto_calendar" style="display: none;">Go to calendar</button>
+        <button id="signout_button" style="display: none;">Sign Out</button>
+        <div id="signout_info" style="display: none;">This will remove your authorization for this extension.</div>
+        <div id="buyMeACoffee"><a href="https://buymeacoffee.com/perffine" target="_blank" rel="noopener noreferrer">Buy me a coffee?</a></div>
+    </div>
+    <div id="errorMessages" style="display: none;"></div>
+    <script src="sidepanel.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</body>
+</html>

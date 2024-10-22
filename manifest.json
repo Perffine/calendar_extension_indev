@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Victor's Calendar Program!",
+  "version": "1.08",
+  "version_name": "1.08 beta",
+  "description": "Highlights from Google calendar",
+  "icons": {
+    "16": "images/icon-16E.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "side_panel": {
+    "default_path": "calendar_highlights_sidepanel.html"
+  },
+  "permissions": ["sidePanel", "storage", "identity"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "action": {
+    "default_title": "Click to open panel"
+  },
+  "oauth2": {
+    "client_id": "302839396414-vjr4kh1thrifpd0cigfb3ffekbr4vhf7.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/calendar.events.readonly", "https://www.googleapis.com/auth/calendar.readonly"]
+  }
+}
